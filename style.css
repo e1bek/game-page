@@ -1,0 +1,116 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light header {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+body.light footer {
+  background: #e2e8f0;
+}
+
+body.light .text-slate-400,
+body.light .text-slate-500 {
+  color: #475569 !important;
+}
+
+body.light .bg-white\/5 {
+  background: rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:before , .loader:after{
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #FF3D00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {  transform: rotate(0)}
+  100% { transform: rotate(360deg)}
+}
+.game-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.game-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-discount {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+}
+
+.badge-store {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+}
+
+.hidden-soft {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
